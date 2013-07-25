@@ -1,0 +1,39 @@
+[This project has not yet been completely imported into git.  Some parts
+are still missing.]
+
+
+               Magrathea - Object-oriented GUI framework
+
+
+Magrathea is an object-oriented framework for GUI applications,
+implemented in C++.  It has been developed as an attempt to provide a
+programming interface similar to the beautiful (at least when compared
+to then popular libraries such as MFC) BeOS API on Windows.
+
+The framework is far from being complete and is in no way "production
+ready".  In particular, it lacks serious error handling.  Nevertheless,
+an earlier version has been used to successfully build an interactive 3d
+landscape editor and fractal landscape generator.  The framework also
+inherited its name from that program.  (How else could you name a
+program for creating planets?)
+
+The platform-specific parts of the framework are all nicely hidden
+behind a set of pure-virtual classes.  Porting the framework to a
+different target platform would only require implementing the interfaces
+specified in the PlatformXXX classes and providing a subclass of the
+Application class.
+
+Parts of this project date back before the C++98 standard.  At that
+time, most C++ compilers shipped without a real standard library.
+Therefore, the framework contains some classes (strings, collections,
+managed pointers) whose functionality is now provided by the C++
+standard library.
+
+The original target compiler for this library was Visual C++ 6.0.
+Because C++ compiler have since become stricter in their interpretation
+of the language, the code has been updated so that it can be compiled
+with todays compilers.  The provided Makefile can be used to build the
+framework on Linux using a MinGW cross-compiler.
+
+The files in this repository are licensed under the conditions specified
+in the accompanying LICENSE file.
