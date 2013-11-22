@@ -1,6 +1,6 @@
 CFLAGS := -I .
 
-CXX := i586-mingw32msvc-g++
+CXX := i686-w64-mingw32-c++
 DEP := $(CXX) -MM
 
 DIRS := app interface support
