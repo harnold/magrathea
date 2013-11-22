@@ -1,5 +1,7 @@
-[This project has not yet been completely imported into git.  Some parts
-are still missing.]
+[The following components of the original library have not yet been
+ imported into git: ImageList, PaintBox, Panel, Screen, Slider, TabView,
+ and XButton.  I have adjusted the Makefile so that the library can be
+ built in its current state.]
 
 
                Magrathea - Object-oriented GUI framework
