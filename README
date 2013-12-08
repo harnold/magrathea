@@ -14,7 +14,7 @@ to then popular libraries such as MFC) BeOS API on Windows.
 
 The framework is far from being complete and is in no way "production
 ready".  In particular, it lacks serious error handling.  Nevertheless,
-an earlier version has been used to successfully build an interactive 3d
+an earlier version has been successfully used to build an interactive 3d
 landscape editor and fractal landscape generator.  The framework also
 inherited its name from that program.  (How else could you name a
 program for creating planets?)
