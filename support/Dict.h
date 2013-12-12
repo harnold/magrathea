@@ -231,13 +231,10 @@ void Dict<Key, T, Hash>::Clear()
 {
     for (int i = 0; i < m_size; ++i)
     {
-        Node **node_ptr = &m_nodes[i];
-
-        while (*node_ptr != nullptr)
+        while (m_nodes[i] != nullptr)
         {
-            Node* node = *node_ptr;
-            *node_ptr = node->next;
-
+            Node* node = m_nodes[i];
+            m_nodes[i] = node->next;
             this->DeleteItem(node->data);
             delete node;
         }
