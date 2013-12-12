@@ -571,6 +571,7 @@ void List<T>::Clear()
         delete node;
     }
 
+    m_end.prev = &m_end;
     m_count = 0;
 }
 
