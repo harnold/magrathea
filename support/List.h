@@ -561,12 +561,10 @@ List<T>::FindNextRef(const T* data, const ConstIterator& pos) const
 template <class T>
 void List<T>::Clear()
 {
-    Link** node_ptr = &m_end.next;
-
-    while (*node_ptr != &m_end)
+    while (m_end.next != &m_end)
     {
-        Node* node = static_cast<Node*>(*node_ptr);
-        *node_ptr = node->next;
+        Node* node = static_cast<Node*>(m_end.next);
+        m_end.next = node->next;
         this->DeleteItem(node->data);
         delete node;
     }
